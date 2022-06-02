@@ -19,7 +19,7 @@ def home():
 def ranking():
     """"Route to home page"""
     shows, selected_players = face_mash.home_handler()
-    return render_template('randking.html', 
+    return render_template('ranking.html',
                             shows=shows, 
                             selected_players=selected_players)
 
