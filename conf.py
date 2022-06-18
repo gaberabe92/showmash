@@ -1,4 +1,4 @@
 HOST="localhost"
-USER=""
-PASSWORD=""
-DATABASE="facemash"
+USER="showmash"
+PASSWORD="showmash"
+DATABASE="showmash"
