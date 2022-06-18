@@ -42,9 +42,9 @@ for index in range(0, len(movies)):
 
 mydb = mysql.connector.connect(
   host="localhost",
-  user="",
-  password="",
-  database="",
+  user="showmash",
+  password="showmash",
+  database="showmash",
   auth_plugin='mysql_native_password'
 )
 
