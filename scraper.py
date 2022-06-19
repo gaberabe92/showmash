@@ -63,7 +63,7 @@ def download_image(movie_id):
         shutil.copyfileobj(response.raw, out_file)
     del response
     return True
-
+    
 
 for item in imdb:
     print (item)
