@@ -1,6 +1,6 @@
 # ShowMash
 
-Webapp to let two TV series compete against each other in a battle, where the user has to choose the better of the two shows and they are then ranked.
+Webapp written in Python with the Flask Framework to let two TV series compete against each other in a battle, where the user has to choose the better of the two shows and they are then ranked.
 
 ## Why ShowMash?
 
