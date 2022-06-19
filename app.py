@@ -17,7 +17,7 @@ def home():
 
 @app.route("/ranking", methods=["GET"])
 def ranking():
-    """"Route to home page"""
+    """"Route to the ranking page"""
     shows, selected_players = show_mash.home_handler()
     return render_template('ranking.html',
                             shows=shows, 

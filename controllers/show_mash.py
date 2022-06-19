@@ -55,7 +55,7 @@ def get_all_show():
     return shows
 
 def select_players():
-    """Selected random two player"""
+    """Select random two player"""
     selected_players = [TVShows().get_random_play(), TVShows().get_random_play()]
     shows = get_all_show()
     for show in shows:

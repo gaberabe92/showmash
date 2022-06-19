@@ -4,7 +4,7 @@ from conf import (HOST, USER,
                   PASSWORD, DATABASE)
 
 class TVShows():
-    """Database model to handle TVShows query"""
+    """Database model to handle the TV Shows query"""
     def __init__(self):
         self.db = mysql.connector.connect(
             host=HOST,
@@ -14,7 +14,7 @@ class TVShows():
             auth_plugin='mysql_native_password'
             )
     def get_all(self):
-        """Get all the shows"""
+        """Get all the shows ordered by their ELO in descending order"""
         cursor = self.db.cursor(dictionary=True)
         cursor.execute("SELECT * FROM shows ORDER BY show_elo desc")
         result = cursor.fetchall()
@@ -22,7 +22,7 @@ class TVShows():
         return result
     
     def get_random_play(self):
-        """Get a random player from DB"""
+        """Get a random tv show from DB"""
         cursor = self.db.cursor(dictionary=True)
         cursor.execute("SELECT * FROM shows ORDER BY RAND() LIMIT 1")
         result = cursor.fetchone()
@@ -37,7 +37,7 @@ class TVShows():
         return result
     
     def update_winner_show(self, show_id, elo, wins, match):
-        """Update the winner details in db"""
+        """Update the winner details in the database"""
         cursor = self.db.cursor(dictionary=True)
         query = "UPDATE shows SET show_elo = '%s', wins = '%s', matches='%s' WHERE show_id = '%s'" % (elo, wins, match, show_id)
         cursor.execute(query)
@@ -45,7 +45,7 @@ class TVShows():
         return True
     
     def update_looser_show(self, show_id, elo, match):
-        """Update the looser details in db"""
+        """Update the loser details in the database"""
         cursor = self.db.cursor(dictionary=True)
         query = "UPDATE shows SET show_elo = '%s', matches='%s' WHERE show_id = '%s'" % (elo, match, show_id)
         cursor.execute(query)

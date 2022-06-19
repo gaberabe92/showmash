@@ -79,7 +79,7 @@ http://localhost:5000
 
 ## Usage
 
-- `scraper.py` to download the TV Show data including image covers
+- `scraper.py` to download the TV Show data including image covers and write it to the database with a starting ELO of 400
 - `conf.py` to store the MySQL database information
 - `app.py` main entry point of flask app that contains all the API
 
