@@ -14,6 +14,10 @@ Instead of rating each tv show individually and thus arriving at a ranking, i th
 
 I took the top 250 tv shows from idbm and in my project I let two tv shows compete against each other and this is how I got the rating.
 
+## Try it / Demo
+
+[https://showmash.herokuapp.com/](https://showmash.herokuapp.com/)
+
 ## Table of Contents
 
 - [Installation](#installation)
